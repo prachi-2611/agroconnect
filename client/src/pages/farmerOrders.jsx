@@ -15,7 +15,7 @@ function FarmerOrders() {
 
   const fetchOrders = async () => {
     const { data } = await axios.get(
-      "http://localhost:5000/api/orders/farmer-orders",
+      "https://agroconnect-api-e68t.onrender.com/api/orders/farmer-orders",
       {
         headers: {
           Authorization: `Bearer ${userInfo.token}`,
@@ -28,7 +28,7 @@ function FarmerOrders() {
 
   const completeOrder = async (id) => {
     await axios.put(
-      `http://localhost:5000/api/orders/complete/${id}`,
+      `https://agroconnect-api-e68t.onrender.com/api/orders/complete/${id}`,
       {},
       {
         headers: {

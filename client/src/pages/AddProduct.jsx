@@ -63,7 +63,7 @@ function AddProduct() {
 
       await axios.post(
 
-        "http://localhost:5000/api/products",
+        "https://agroconnect-api-e68t.onrender.com/api/products",
 
         {
           name,

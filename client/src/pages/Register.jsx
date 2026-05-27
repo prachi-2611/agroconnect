@@ -19,7 +19,7 @@ function Register() {
       setLoading(true);
 
       await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://agroconnect-api-e68t.onrender.com/api/auth/register",
         {
           name,
           email,

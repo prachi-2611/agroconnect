@@ -35,10 +35,10 @@ function Products() {
   /* FETCH PRODUCTS */
   const fetchProducts = async () => {
     try {
-      let url = "http://localhost:5000/api/products";
+      let url = "https://agroconnect-api-e68t.onrender.com/api/products";
 
       if (userInfo?.user?.role === "farmer") {
-        url = "http://localhost:5000/api/products/my-products";
+        url = "https://agroconnect-api-e68t.onrender.com/api/products/my-products";
       }
 
       const config = {};
@@ -85,7 +85,7 @@ function Products() {
       setBuyLoading(true);
 
       await axios.post(
-        "http://localhost:5000/api/orders",
+        "https://agroconnect-api-e68t.onrender.com/api/orders",
         {
           productId: selectedProduct._id,
           quantity,

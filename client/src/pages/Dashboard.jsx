@@ -79,7 +79,7 @@ const [message, setMessage] = useState("");
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/orders/dashboard",
+        "https://agroconnect-api-e68t.onrender.com/api/orders/dashboard",
         {
           headers: {
             Authorization:
@@ -101,7 +101,7 @@ const [message, setMessage] = useState("");
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/orders/buyer",
+        "https://agroconnect-api-e68t.onrender.com/api/orders/buyer",
         {
           headers: {
             Authorization:
@@ -189,7 +189,7 @@ const [message, setMessage] = useState("");
     try {
 
       await axios.put(
-        `http://localhost:5000/api/orders/${id}`,
+        `https://agroconnect-api-e68t.onrender.com/api/orders/${id}`,
         {},
         {
           headers: {
@@ -218,7 +218,7 @@ const [message, setMessage] = useState("");
     setBuyLoading(true);
 
     await axios.post(
-      "http://localhost:5000/api/orders",
+      "https://agroconnect-api-e68t.onrender.com/api/orders",
       {
         productId: selectedProduct._id,
         quantity,

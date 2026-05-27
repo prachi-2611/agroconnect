@@ -40,7 +40,7 @@ function FarmerProducts() {
   const fetchMyProducts = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/products/my-products",
+        "https://agroconnect-api-e68t.onrender.com/api/products/my-products",
         {
           headers: {
             Authorization: `Bearer ${userInfo.token}`,
@@ -64,7 +64,7 @@ function FarmerProducts() {
   const deleteProduct = async () => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/products/${deleteId}`,
+        `https://agroconnect-api-e68t.onrender.com/api/products/${deleteId}`,
         {
           headers: {
             Authorization: `Bearer ${userInfo.token}`,
@@ -96,7 +96,7 @@ function FarmerProducts() {
 
     try {
       const { data } = await axios.put(
-        `http://localhost:5000/api/products/${editProduct._id}`,
+        `https://agroconnect-api-e68t.onrender.com/api/products/${editProduct._id}`,
         editForm,
         {
           headers: {
