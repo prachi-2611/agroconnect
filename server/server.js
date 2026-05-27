@@ -1,3 +1,5 @@
+const cors = require("cors");
+
 const express = require("express");
 
 const cors = require("cors");
@@ -26,6 +28,10 @@ const orderRoutes = require("./routes/orderRoutes");
 
 const app = express();
 
+app.use(cors({
+  origin: "https://agroconnect-wine-rho.vercel.app/",
+  credentials: true
+}));
 /* MIDDLEWARE */
 
 app.use(cors());
